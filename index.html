@@ -3,36 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Gestion Matériel</title>
 
-<!-- Manifest -->
 <link rel="manifest" href="manifest.json">
-
-<!-- iPhone icons -->
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-
-<!-- Android icons -->
 <link rel="icon" sizes="192x192" href="icons/icon-192.png">
-
 <meta name="theme-color" content="#fbbc05">
 
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Empêche le double défilement */
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>
 </head>
 <body>
 
-<h2>Gestion Matériel</h2>
+<iframe src="https://script.google.com/macros/s/AKfycbypJVsHuW8hP8Zv-YDDDyTXVu-BPeb9rfMLrl8ow8AS1pnBI27RoopcCWL8MMihC97K/exec">
+    <p>Votre navigateur ne supporte pas les iframes.</p>
+</iframe>
 
 <script>
-// Remplace par TON URL DE WEBAPP
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypJVsHuW8hP8Zv-YDDDyTXVu-BPeb9rfMLrl8ow8AS1pnBI27RoopcCWL8MMihC97K/exec";
-
-// Exemple d'appel à ton Apps Script :
-fetch(SCRIPT_URL)
-  .then(r => r.text())
-  .then(console.log)
-  .catch(console.error);
-
-// Service worker
+// Service worker (nécessaire pour que l'installation PWA fonctionne)
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js");
 }
@@ -40,4 +40,3 @@ if ("serviceWorker" in navigator) {
 
 </body>
 </html>
-
