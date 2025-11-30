@@ -11,35 +11,45 @@
 <meta name="theme-color" content="#fbbc05">
 
 <style>
-  body, html {
+  body {
+    background-color: #fbbc05; /* La couleur de votre thème */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Empêche le double défilement */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
   }
-  iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-    display: block;
+  .loader {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
   }
 </style>
 </head>
 <body>
 
-<iframe src="https://script.google.com/macros/s/AKfycbwLLB7yQ2sE0yETw-I3iBjhKSU21KcZimlIPc9w0V4rW4QKR4qr7c68J_gGrCHuGKFq/exec">
-    <p>Votre navigateur ne supporte pas les iframes.</p>
-</iframe>
+<h2>Gestion Matériel</h2>
+<div class="loader">Connexion sécurisée fhfhfhf.com...</div>
 
 <script>
-// Service worker (nécessaire pour que l'installation PWA fonctionne)
+// 1. Service Worker (Indispensable pour que ce soit une PWA installable)
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js");
 }
+
+// 2. VOTRE LIEN APPS SCRIPT
+// Assurez-vous d'avoir déployé en "Exécuter en tant que : MOI" 
+// et "Qui a accès : Tous les utilisateurs de fhfhfhf.com"
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLLB7yQ2sE0yETw-I3iBjhKSU21KcZimlIPc9w0V4rW4QKR4qr7c68J_gGrCHuGKFq/exec";
+
+// 3. La Redirection
+// On redirige immédiatement l'utilisateur vers la page Google sécurisée
+window.location.replace(SCRIPT_URL);
 </script>
 
 </body>
 </html>
-
-
-
