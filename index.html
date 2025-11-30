@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gestion Matériel</title>
+
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- iPhone icons -->
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<!-- Android icons -->
+<link rel="icon" sizes="192x192" href="icons/icon-192.png">
+
+<meta name="theme-color" content="#fbbc05">
+
+</head>
+<body>
+
+<h2>Gestion Matériel</h2>
+
+<script>
+// Remplace par TON URL DE WEBAPP
+const SCRIPT_URL = "https://script.google.com/macros/s/TON_ID/exec";
+
+// Exemple d'appel à ton Apps Script :
+fetch(SCRIPT_URL)
+  .then(r => r.text())
+  .then(console.log)
+  .catch(console.error);
+
+// Service worker
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+</body>
+</html>
